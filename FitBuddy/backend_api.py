@@ -2,8 +2,8 @@ from typing import Dict
 
 import base64
 import cv2
-from models import Base
-from database import engine
+from FitBuddy.models import Base
+from FitBuddy.database import engine
 import numpy as np
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
@@ -11,14 +11,15 @@ from pydantic import BaseModel
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 
-from pose_detector import PoseDetector
-from angles import extract_angles
-from database import SessionLocal, get_db
-from models import User
-from user_manager import hash_password
+from FitBuddy.pose_detector import PoseDetector
+from FitBuddy.angles import extract_angles
+from FitBuddy.database import SessionLocal, get_db
+from FitBuddy.models import User
+from FitBuddy.user_manager import hash_password
 from typing import Dict
 from fastapi import FastAPI
 from pydantic import BaseModel
+from typing import Optional
 
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
@@ -58,10 +59,10 @@ class LoginResponse(BaseModel):
 
 class UserInfoRequest(BaseModel):
     email: str              # 어떤 사용자인지 구분 (로그인에 쓰는 이메일)
-    height_cm: int | None = None
-    weight_kg: float | None = None
-    gender: str | None = None
-    workout_goal: str | None = None
+    height_cm: Optional[int] = None
+    weight_kg: Optional[float] = None
+    gender: Optional[str] = None
+    workout_goal: Optional[str] = None
 
 
 class UserInfoResponse(BaseModel):

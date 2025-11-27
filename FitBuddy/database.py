@@ -7,7 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 # PostgreSQL DB 연결 URL
 # !!! 중요: <YOUR_ACTUAL_PASSWORD> 부분을 실제 설정했던 비밀번호로 변경하세요 !!!
-DATABASE_URL = "postgresql+psycopg2://postgres:0226@localhost:5432/fitbuddy"
+DATABASE_URL = "postgresql+psycopg2://fituser:fitbuddy12@db-fitbuddy.cry4ygqkgluf.ap-southeast-2.rds.amazonaws.com:5432/postgres"
 
 
 # SQLAlchemy 엔진 생성

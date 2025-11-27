@@ -8,8 +8,8 @@ from datetime import datetime
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from FitBuddy.database import SessionLocal
-from models import User
+from .database import SessionLocal
+from .models import User
 from sqlalchemy.exc import IntegrityError
 
 def hash_password(password: str) -> str:

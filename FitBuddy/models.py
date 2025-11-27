@@ -1,4 +1,4 @@
-# FitBuddy/models.py
+from FitBuddy.database import Base
 
 from sqlalchemy import Column, Integer, String, DECIMAL, DateTime, ForeignKey, Text, Float
 from sqlalchemy.orm import relationship
@@ -6,7 +6,7 @@ from sqlalchemy.sql import func
 from geoalchemy2 import Geometry
 
 # 같은 폴더에 있는 database.py에서 Base를 불러옴
-from database import Base
+from .database import Base
 
 class SportsFacility(Base):
     __tablename__ = "sports_facilities" # DB에 생성될 테이블 이름
