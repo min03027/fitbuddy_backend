@@ -11,7 +11,7 @@ from Chatbot_main.auth import get_current_user
 if TYPE_CHECKING:
     from Chatbot_main.auth import CurrentUser
 
-router = APIRouter(prefix="/api", tags=["chat"])
+router = APIRouter(tags=["chat"])
 
 class ChatReq(BaseModel):
     message: str

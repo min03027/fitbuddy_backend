@@ -4,8 +4,8 @@ from sqlalchemy import Column, Integer, String, Text, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
-from database import Base          # ← FitBuddy/database.py 의 Base
-from models import User            # ← FitBuddy/models.py 의 User (이미 정의됨)
+from FitBuddy.database import Base          # ← FitBuddy/database.py 의 Base
+from FitBuddy.models import User           # ← FitBuddy/models.py 의 User (이미 정의됨)
 
 class ChatLog(Base):
     __tablename__ = "chat_logs"

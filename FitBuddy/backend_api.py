@@ -24,7 +24,6 @@ from typing import Optional
 from Chatbot_main.router import router as chatbot_router
 from Chatbot_main.LLM.load_model import get_llm
 
-
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
 
