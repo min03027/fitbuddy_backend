@@ -1,0 +1,28 @@
+INFO:     Started server process [109563]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[SIGNUP] gkgustn0129@naver.com registered. user_id=4
+INFO:     114.205.86.44:39068 - "POST /signup HTTP/1.1" 200 OK
+[USER_INFO] gkgustn0129@naver.com -> {'email': 'gkgustn0129@naver.com', 'height_cm': 180, 'weight_kg': 74.0, 'gender': 'male', 'workout_goal': 'muscle-gain'}
+INFO:     114.205.86.44:53582 - "POST /user/info HTTP/1.1" 200 OK
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1764243587.146779  109995 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1764243587.176798  109995 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+/home/ec2-user/fitbuddy_backend/venv/lib64/python3.9/site-packages/google/protobuf/symbol_database.py:55: UserWarning: SymbolDatabase.GetPrototype() is deprecated. Please use message_factory.GetMessageClass() instead. SymbolDatabase.GetPrototype() will be removed soon.
+  warnings.warn('SymbolDatabase.GetPrototype() is deprecated. Please '
+INFO:     114.205.86.44:33960 - "POST /pose/analyze HTTP/1.1" 200 OK
+W0000 00:00:1764243587.662924  109996 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1764243587.698745  109996 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:     114.205.86.44:33962 - "POST /pose/analyze HTTP/1.1" 200 OK
+W0000 00:00:1764243588.143719  109998 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1764243588.167315  109998 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:     114.205.86.44:33960 - "POST /pose/analyze HTTP/1.1" 200 OK
+W0000 00:00:1764243588.883016  110000 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1764243588.918059  110000 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:     114.205.86.44:33960 - "POST /pose/analyze HTTP/1.1" 200 OK
+W0000 00:00:1764243589.640540  110002 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1764243589.664481  110002 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+INFO:     114.205.86.44:33960 - "POST /pose/analyze HTTP/1.1" 200 OK
+W0000 00:00:1764243622.056055  110004 inference_feedback_manager.cc:114] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.

@@ -21,8 +21,21 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import Optional
 
+from Chatbot_main.router import router as chatbot_router
+from Chatbot_main.LLM.load_model import get_llm
+
+
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
+
+app.include_router(chatbot_router, prefix="/api")
+
+@app.on_event("startup")
+def load_llm_on_startup():
+    print("[STARTUP] LLM 로딩 시작")
+    get_llm()
+    print("[STARTUP] LLM 로딩 완료")
+
 
 # CORS 설정 (프론트엔드에서 접근 가능하도록)
 app.add_middleware(
